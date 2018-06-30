@@ -12,6 +12,8 @@ get 'users/index'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get 'login/teacher', to: 'users#show_t'
+  get '/login/student', to: 'users#show_s'
    resources :users
 
 end
